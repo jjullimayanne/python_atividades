@@ -1,52 +1,60 @@
 from re import A
 
-#palavra reservada class seguida do nome da class
+# palavra reservada class seguida do nome da class
+
+
 class Calculadora:
-    # criar metodo com a palavra reservada def e construtor com a palavra reservada __init__
-    #passa os atributos da classe
+    # criar método com a palavra reservada def e construtor com a palavra reservada __init__
+    # passa os atributos da classe
     def __init__(self, numeroUm, numeroDois) -> None:
-        #vamos receber esse valor sempre que esse objeto for instanciado
+        # vamos receber esse valor sempre que esse objeto for instanciado
         self.numeroUm = numeroUm
         self.numeroDois = numeroDois
-    # metodo de somar 
+    # método de somar
+
     def somar(self):
         return self.numeroUm + self.numeroDois
-    #metodo de subtrair
+    # método de subtrair
+
     def subtrair(self):
         return self.numeroUm - self.numeroDois
-    #metodo de dividir
+    # método de dividir
+
     def dividir(self):
         return self.numeroUm / self.numeroDois
-    #meotodo de multiplicar 
+    # método de multiplicar
+
     def multiplicar(self):
         return self.numeroUm * self.numeroDois
-    #meotodo de exponenciação
+    # método de exponenciação
+
     def exponenciação(self):
-         return self.numeroUm ^ self.numeroDois
-    #meotodo de modulo
+        return self.numeroUm ** self.numeroDois
+    # método de modulo
+
     def modulo(self):
-         return self.numeroUm % self.numeroDois
-        
- #receber os numeros por input
+        return self.numeroUm % self.numeroDois
+
+
+# receber os numeros por input
 numeroUm = int(input("Digite o primeiro número para o calculo: "))
 numeroDois = int(input("Digite o segundo número para o calculo: "))
- #receber escolha da operação por input
-escolhaOperacao = int(input("Digite o numero correspondente a operação que deseja fazer: \n 1) Soma \n 2) Subtraçao \n 3) Multiplicação \n 4) Divisão \n 5) Exponenciação \n 6) Divisão \n "))
+# receber escolha da operação por input
+escolhaOperacao = int(input(
+    "Digite o numero correspondente a operação que deseja fazer: \n 1) Soma \n 2) Subtração \n 3) Multiplicação \n 4) Divisão \n 5) Exponenciação \n 6) Módulo \n "))
 
 conta = Calculadora(numeroUm, numeroDois)
 
-#fazer a operação de acordo com o input recebido
+# fazer a operação de acordo com o input recebido
 if escolhaOperacao == 1:
-    print(conta.somar())
+    print(f'O resultado da operação é {conta.somar()}')
 elif escolhaOperacao == 2:
-    print(conta.subtrair())
+    print(f'O resultado da operação é {conta.subtrair()}')
 elif escolhaOperacao == 3:
-    print(conta.multiplicar())
+    print(f'O resultado da operação é {conta.multiplicar()}')
 elif escolhaOperacao == 4:
-    print(conta.dividir())
+    print(f'O resultado da operação é {conta.dividir()}')
 elif escolhaOperacao == 5:
-    print(conta.exponenciação())
+    print(f'O resultado da operação é {conta.exponenciação()}')
 elif escolhaOperacao == 6:
-    print(conta.modulo())
-
-
+    print(f'O resultado da operação é {conta.modulo()}')
